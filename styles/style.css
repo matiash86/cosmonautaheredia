@@ -108,3 +108,7 @@ footer ul li a {
 
 /* ANIMACIONES NAV */
 
+header nav a:hover {
+    transform: rotate(15deg);
+    transition: all 0.4s ease-in-out;
+}
