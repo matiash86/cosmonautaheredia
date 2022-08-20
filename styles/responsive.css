@@ -1,0 +1,77 @@
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "productos"
+    "pepe";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    align-content: end;
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (max-width: 599px) and (orientation: landscape) {
+    .grid {
+      grid-template-rows: 3fr 3fr 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  /* Fin de diseno mobile  */
+  
+  /* Diseno para tableta */
+  @media screen and (min-width: 600px) and (orientation: portrait) {
+    .grid {
+      grid-template-areas: 
+      "header header"
+      "nav productos"
+      "nav publicidad"
+      "nav servicios"
+      "footer footer";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    header {
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (min-width: 600px) and (orientation: landscape) {
+    .grid {
+      grid-template-areas: 
+      "header header header"
+      "nav productos publicidad"
+      "nav servicios publicidad";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .navbar {
+      display: flex;
+    }
+  }
+  
+  /* Fin de diseno para tableta */
+  
+  /* Diseno para desktop */
+  @media screen and (min-width: 1200px) {
+    .grid {
+      grid-template-areas: 
+      "header header header"
+      "nav productos publicidad"
+      "nav servicios publicidad"
+      "footer footer footer";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+    }
+    .navbar {
+      display: flex;
+    }
+  }
+  
+  @media print {
+  }
+  
+  /* Fin de diseno para desktop */
+
